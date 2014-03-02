@@ -3,16 +3,16 @@ class App.Views.EditNote extends Backbone.View
 
   tagName: 'form'
 
-  events: 
+  events:
     'submit': 'saveModel'
 
 
-  render: -> 
+  render: ->
     @$el.html(@template(note: @model))
     this
 
-  saveModel: (e) -> 
-    @model.set
+  saveModel: (e) ->
+    @model.save
       title: @$('.note-title').val()
       content: @$('.note-content').val()
     Backbone.history.navigate('/', trigger: true)

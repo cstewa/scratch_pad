@@ -1,13 +1,13 @@
 class App.Routers.ScratchPadRouter extends Backbone.Router
-  routes: 
+  routes:
     '': 'index'
-    '/notes/:id': 'showNote'
+    'notes/:id': 'showNote'
 
-  index: -> 
+  index: ->
     view = new App.Views.Notes(collection: App.AllNotes)
     $('#container').html(view.render().el)
 
-  showNote: (id) -> 
-    model = App.AllNotes[id - 1]
+  showNote: (id) ->
+    model = App.AllNotes.get(id)
     view = new App.Views.EditNote(model: model)
     $('#container').html(view.render().el)

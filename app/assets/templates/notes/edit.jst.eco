@@ -2,4 +2,4 @@
 <br />
 <textarea class="note-content"><%= @note.get('content') %> </textarea>
 <br />
-<input type="submit" /> 
+<input type="submit" />
