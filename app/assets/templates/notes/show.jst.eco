@@ -1,6 +1,9 @@
-<dl>
-  <dt> Title </dt>
-  <dd><a class = 'edit-note' href="#"><%= @note.get('title') %></a> </dd>
-  <dt> Content </dt>
-  <dd> <%= @note.get('content') %> </dd>
-</dl>
+<header class="title-container">
+  <input type="text" class="note-title" placeholder="Title..." value="<%= @note.get('title') %>" />
+</header>
+<div class="body">
+  <textarea class="note-content" placeholder="Content..."><%= @note.get('content') %></textarea>
+</div>
+<div class="footer">
+  <button class="save">Save</button>
+</div>
