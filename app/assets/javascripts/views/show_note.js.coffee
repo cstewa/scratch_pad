@@ -8,6 +8,7 @@ class App.Views.ShowNote extends Backbone.View
     'keydown .note-title': 'blurIfEnter'
     'focus .note-title, .note-content': 'beginEditing'
     'blur .note-title, .note-content': 'endEditing'
+    'click .destroy-note': 'destroyNote'
 
 
   render: ->
@@ -30,3 +31,8 @@ class App.Views.ShowNote extends Backbone.View
 
   endEditing: ->
     @$el.removeClass('editing')
+
+  destroyNote: ->
+    @model.destroy()
+    @remove()
+    false

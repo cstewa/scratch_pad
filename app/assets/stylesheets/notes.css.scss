@@ -45,6 +45,19 @@
       }
     }
 
+    &:hover {
+      .destroy-note {
+        display: block;
+      }
+    }
+
+    .destroy-note {
+      top: 7px;
+      right: 5px;
+      display: none;
+      float: left;
+    }
+
     .footer {
       display: none;
     }
