@@ -2,7 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.note, .add-actions {
+.notes {
+  padding-right: 100px;
+}
+.note {
   width: 225px;
   height: 225px;
   margin: 20px;
@@ -71,15 +74,30 @@
       float: left;
     }
 
-    .footer {
+    .editing-footer {
       display: none;
+    }
+
+    .normal-footer {
+      color: gray;
+      border-top: 1px solid black;
+      padding-top: 10px;
+      font-size: 0.8em;
     }
 
     &.editing {
       border-color: blue;
 
-      .footer {
+      .editing-footer {
         display: block;
       }
+
+      .normal-footer {
+        display: none;
+      }
+    }
+
+    &.error {
+      border-color: red;
     }
 }

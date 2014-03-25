@@ -14,6 +14,10 @@
 //= require jquery_ujs
 //= require lodash
 //= require backbone
+//= require jquery.ui.draggable
+//= require jquery.ui.droppable
+//= require jquery.ui.sortable
+//= require moment
 //= require scratch_pad
 //= require_tree ../templates
 //= require_tree ./models
